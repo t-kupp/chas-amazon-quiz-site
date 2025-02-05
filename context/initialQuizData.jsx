@@ -1,8 +1,10 @@
 // DUMMYDATA
 // Small initial quizzes for development, later to be replaced with other questions and/or questions added through the admin page
 
-export const initialQuizData = {
-  gamesQuiz: [
+const gamesQuiz = {
+  title: 'Games',
+  href: '/games',
+  questions: [
     {
       title: 'Who is the protagonist in The Legend of Zelda?',
       answers: [
@@ -31,7 +33,12 @@ export const initialQuizData = {
       ],
     },
   ],
-  movieQuiz: [
+};
+
+const movieQuiz = {
+  title: 'Movies',
+  href: '/movies',
+  questions: [
     {
       title: 'Who directed the movie *Inception*?',
       answers: [
@@ -61,3 +68,5 @@ export const initialQuizData = {
     },
   ],
 };
+
+export const initialQuizData = [gamesQuiz, movieQuiz];
