@@ -6,8 +6,6 @@ import QuizCard from '@/Component/QuizCard'
 export default function Home() {
   const { quizData } = useContext(QuizContext);
 
-  console.log(quizData);
-
   return (
     <div>
       <button className='btn btn-neutral fixed right-4 top-4 ml-auto'>
@@ -21,12 +19,12 @@ export default function Home() {
               This is Group Amazons Quiz site. Placeholder text. Lorem ipsum lorem ipsum lorem ipsum
               lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
             </p>
-            <ul className='grid grid-cols-2 gap-4'>
+            <ul className='content- grid grid-cols-2 gap-4'>
               {quizData.map((quiz, index) => {
                 return (
-                  <button key={index} className='btn btn-primary'>
-                    <Link href={quiz.href}>{quiz.title}</Link>
-                  </button>
+                  <Link key={index} href={quiz.href}>
+                    <button className='btn btn-primary w-full'>{quiz.title}</button>
+                  </Link>
                 );
               })}
             </ul>
