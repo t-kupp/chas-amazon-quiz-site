@@ -21,9 +21,9 @@ export default function Home() {
               lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
             </p>
             <ul className='grid grid-cols-2 gap-4'>
-              {quizData.map((quiz) => {
+              {quizData.map((quiz, index) => {
                 return (
-                  <button className='btn btn-primary'>
+                  <button key={index} className='btn btn-primary'>
                     <Link href={quiz.href}>{quiz.title}</Link>
                   </button>
                 );
