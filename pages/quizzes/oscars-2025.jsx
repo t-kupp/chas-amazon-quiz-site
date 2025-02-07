@@ -1,3 +1,9 @@
+import QuizPage from '@/components/QuizPage';
+import { QuizContext } from '@/context/quizContext';
+import { useContext } from 'react';
+
 export default function oscars2025() {
-  return <h1>About the Oscars 2025!</h1>;
+  const { quizData } = useContext(QuizContext);
+
+  return <QuizPage quiz={quizData.oscars2025Quiz} />;
 }

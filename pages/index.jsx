@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { QuizContext } from '@/context/quizContext';
 import Link from 'next/link';
-import QuizCard from '@/components/QuizCard';
 
 export default function Home() {
   const { quizData } = useContext(QuizContext);
@@ -20,18 +19,12 @@ export default function Home() {
               lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
             </p>
             <ul className='content- grid grid-cols-2 gap-4'>
-              {quizData.map((quiz, index) => {
-                return (
-                  <Link key={index} href={quiz.href}>
-                    <button className='btn btn-primary w-full'>{quiz.title}</button>
-                  </Link>
-                );
-              })}
+              {Object.entries(quizData).map(([key, quiz]) => (
+                <Link key={key} href={quiz.href}>
+                  <button className='btn btn-primary w-full'>{quiz.title}</button>
+                </Link>
+              ))}
             </ul>
-          </div>
-
-          <div>
-            <QuizCard />
           </div>
         </div>
       </div>

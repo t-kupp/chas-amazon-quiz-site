@@ -6,7 +6,7 @@ const oscars2025Quiz = {
       title:
         'Which movie made history by being the first partially AI-generated film nominated for an Oscar in the Best Original Screenplay category?',
       answers: [
-        { title: 'The Matrix Resurrections', isCorrect: false },
+        { title: 'The Matrix Resurrections', isCorrect: true },
         { title: 'Shadows of the Future', isCorrect: false },
         { title: 'Her', isCorrect: false },
         { title: 'Ex Machina', isCorrect: false },
@@ -202,9 +202,9 @@ const odditiesAndFunFactsQuiz = {
   ],
 };
 
-export const initialQuizData = [
+export const initialQuizData = {
   oscars2025Quiz,
   oscarHistoryQuiz,
   unforgettableMomentsQuiz,
   odditiesAndFunFactsQuiz,
-];
+};
