@@ -13,10 +13,10 @@ export default function Home() {
       <div className='hero min-h-screen bg-base-200'>
         <div className='hero-content text-center'>
           <div className='max-w-md'>
-            <h1 className='text-5xl font-bold'>Welcome to Amazons Quiz!</h1>
-            <p className='py-6'>
-              This is Group Amazons Quiz site. Placeholder text. Lorem ipsum lorem ipsum lorem ipsum
-              lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.
+            <img src='./Academy_Logo_Symbol.jpeg'  alt="Oscar Logo"/>
+            <h1 className='text-5xl font-bold'>Welcome to our Oscar's Quiz!</h1>
+            <p className='py-10 font-semibold'>
+              This is Group Amazon's Quiz site. <br/> Are you ready to test how wide is your knowledge about the famous Academy Awards?
             </p>
             <ul className='content- grid grid-cols-2 gap-4'>
               {Object.entries(quizData).map(([key, quiz]) => (

@@ -6,8 +6,8 @@ const oscars2025Quiz = {
       title:
         'Which movie made history by being the first partially AI-generated film nominated for an Oscar in the Best Original Screenplay category?',
       answers: [
-        { title: 'The Matrix Resurrections', isCorrect: true },
-        { title: 'Shadows of the Future', isCorrect: false },
+        { title: 'The Matrix Resurrections', isCorrect: false },
+        { title: 'Shadows of the Future', isCorrect: true },
         { title: 'Her', isCorrect: false },
         { title: 'Ex Machina', isCorrect: false },
       ],
@@ -27,7 +27,7 @@ const oscars2025Quiz = {
         'Which Spanish film has received 13 nominations for the 2025 Academy Awards, including Best Picture and Best Actress?',
       answers: [
         { title: "Pan's Labyrinth", isCorrect: false },
-        { title: 'Emilia Pérez', isCorrect: false },
+        { title: 'Emilia Pérez', isCorrect: true },
         { title: 'The Sea Inside', isCorrect: false },
         { title: 'Talk to Her', isCorrect: false },
       ],
@@ -44,7 +44,7 @@ const oscars2025Quiz = {
     {
       title: 'Who will co-host the 2025 Academy Awards ceremony?',
       answers: [
-        { title: 'Jimmy Fallon and Reese Witherspoon', isCorrect: false },
+        { title: 'Jimmy Fallon and Reese Witherspoon', isCorrect: true },
         { title: 'Ellen DeGeneres and Ryan Gosling', isCorrect: false },
         { title: 'Kevin Hart and Florence Pugh', isCorrect: false },
         { title: 'Will Smith and Viola Davis', isCorrect: false },
@@ -96,7 +96,7 @@ const oscarHistoryQuiz = {
     {
       title: 'When was the first non-English language film nominated for Best Picture?',
       answers: [
-        { title: '2019 ("Parasite")', isCorrect: false },
+        { title: '2019 ("Parasite")', isCorrect: true },
         { title: '1938 ("Grand Illusion")', isCorrect: false },
         { title: '2000 ("Crouching Tiger, Hidden Dragon")', isCorrect: false },
         { title: '1998 ("Life is Beautiful")', isCorrect: false },
@@ -122,8 +122,8 @@ const unforgettableMomentsQuiz = {
       title:
         'Which of these actors rejected their Oscar in protest and sent an activist in their place?',
       answers: [
-        { title: 'Marlon Brando', isCorrect: true },
-        { title: 'Richard Burton', isCorrect: false },
+        { title: 'Marlon Brando', isCorrect: false },
+        { title: 'Richard Burton', isCorrect: true },
         { title: 'George C. Scott', isCorrect: false },
         { title: 'Jack Nicholson', isCorrect: false },
       ],
@@ -131,10 +131,10 @@ const unforgettableMomentsQuiz = {
     {
       title: 'Which iconic dress was worn on the red carpet at the Academy Awards?',
       answers: [
-        { title: 'Halle Berry’s 2002 Elie Saab gown', isCorrect: true },
+        { title: 'Halle Berry’s 2002 Elie Saab gown', isCorrect: false },
         { title: 'Marilyn Monroe’s “Happy Birthday Mr. President” dress', isCorrect: false },
         { title: 'Audrey Hepburn’s black dress in “Breakfast at Tiffany’s”', isCorrect: false },
-        { title: 'Lady Gaga’s meat dress', isCorrect: false },
+        { title: 'Lady Gaga’s meat dress', isCorrect: true },
       ],
     },
     {
@@ -149,8 +149,8 @@ const unforgettableMomentsQuiz = {
     {
       title: 'Which Oscar acceptance speech sparked the most controversy?',
       answers: [
-        { title: 'Marlon Brando (refused his Oscar)', isCorrect: true },
-        { title: 'Sally Field ("You like me! You really like me!")', isCorrect: false },
+        { title: 'Marlon Brando (refused his Oscar)', isCorrect: false },
+        { title: 'Sally Field ("You like me! You really like me!")', isCorrect: true },
         { title: 'Gwyneth Paltrow (emotional speech)', isCorrect: false },
         { title: 'Joan Crawford (accepted on behalf of Anne Bancroft)', isCorrect: false },
       ],
@@ -167,9 +167,9 @@ const odditiesAndFunFactsQuiz = {
         'Which actor has been nominated both for an Oscar and a Razzie Award in the same year?',
       answers: [
         { title: 'Adam Sandler', isCorrect: false },
-        { title: 'Eddie Murphy', isCorrect: false },
+        { title: 'Eddie Murphy', isCorrect: true },
         { title: 'Jim Carrey', isCorrect: false },
-        { title: 'Nicolas Cage', isCorrect: true },
+        { title: 'Nicolas Cage', isCorrect: false },
       ],
     },
     {
@@ -184,9 +184,9 @@ const odditiesAndFunFactsQuiz = {
     {
       title: 'Who has received the most nominations without ever winning?',
       answers: [
-        { title: 'Glenn Close', isCorrect: true },
+        { title: 'Glenn Close', isCorrect: false },
         { title: 'Amy Adams', isCorrect: false },
-        { title: "Peter O'Toole", isCorrect: false },
+        { title: "Peter O'Toole", isCorrect: true },
         { title: 'Leonardo DiCaprio', isCorrect: false },
       ],
     },
