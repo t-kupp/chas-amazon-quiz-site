@@ -2,8 +2,10 @@ import { useContext } from 'react';
 import { QuizContext } from '@/context/quizContext';
 import Link from 'next/link';
 
+
 export default function Home() {
   const { quizData } = useContext(QuizContext);
+  
 
   return (
     <div>
