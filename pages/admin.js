@@ -64,26 +64,26 @@ export default function Admin() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto bg-gray-900 text-white rounded-lg shadow-lg flex gap-8">
-      <div className="w-2/3 p-6 bg-gray-800 rounded-lg shadow-md">
+      <div className=" w-2/3 p-6 bg-gray-700 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-4">Create a Quiz</h2>
         <input
           type="text"
           placeholder="Quiz Title"
           value={quiz.title}
           onChange={(e) => setQuiz({ ...quiz, title: e.target.value })}
-          className="w-full p-2 mb-4 rounded bg-gray-700 text-white border border-gray-600"
+          className="w-full p-2 mb-4 rounded bg-gray-600 text-white border border-gray-500"
         />
-        <button onClick={addQuestion} className="mb-4 p-2 bg-blue-600 hover:bg-blue-700 rounded">Add Question</button>
+        <button onClick={addQuestion} className="mr-6 p-2 bg-blue-500 hover:bg-blue-600 rounded">Add Question</button>
         {quiz.questions.map((q, qIndex) => (
-          <div key={qIndex} className="border p-4 mb-4 rounded-lg bg-gray-700">
+          <div key={qIndex} className="border p-4 mb-4 rounded-lg bg-gray-600">
             <input
               type="text"
               placeholder="Question Title"
               value={q.title}
               onChange={(e) => updateQuestion(qIndex, e.target.value)}
-              className="w-full p-2 mb-2 rounded bg-gray-600 text-white border border-gray-500"
+              className="w-full p-2 mb-2 rounded bg-gray-500 text-white border border-gray-400"
             />
-            <button onClick={() => addAnswer(qIndex)} className="mb-2 p-2 bg-green-600 hover:bg-green-700 rounded">Add Answer</button>
+            <button onClick={() => addAnswer(qIndex)} className="mb-2 p-2 bg-green-500 hover:bg-green-600 rounded">Add Answer</button>
             {q.answers.map((a, aIndex) => (
               <div key={aIndex} className="flex gap-2 mb-2">
                 <input
@@ -91,7 +91,7 @@ export default function Admin() {
                   placeholder="Answer"
                   value={a.title}
                   onChange={(e) => updateAnswer(qIndex, aIndex, e.target.value, a.isCorrect)}
-                  className="p-2 rounded bg-gray-600 text-white border border-gray-500"
+                  className="p-2 rounded bg-gray-500 text-white border border-gray-400"
                 />
                 <input
                   type="checkbox"
@@ -102,20 +102,20 @@ export default function Admin() {
             ))}
           </div>
         ))}
-        <button onClick={handleSubmit} className="mt-4 p-2 bg-purple-600 hover:bg-purple-700 rounded">
+        <button onClick={handleSubmit} className="mt-8 p-2 bg-purple-500 hover:bg-purple-600 rounded">
           {editingIndex !== null ? 'Update Quiz' : 'Submit Quiz'}
         </button>
       </div>
 
-      <div className="w-1/3 p-6 bg-gray-800 rounded-lg shadow-md">
+      <div className="w-1/3 p-6 bg-gray-700 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-4">Quizzes</h2>
         <ul>
           {quizData.map((q, index) => (
-            <li key={index} className="border p-2 mt-2 flex flex-col bg-gray-700 rounded">
+            <li key={index} className="border p-2 mt-2 flex flex-col bg-gray-600 rounded">
               <span className="text-lg font-semibold break-words">{q.title}</span>
               <div className="mt-2 flex gap-2 justify-end">
-                <button onClick={() => editQuiz(index)} className="p-2 bg-yellow-600 hover:bg-yellow-700 rounded">Edit</button>
-                <button onClick={() => deleteQuiz(index)} className="p-2 bg-red-600 hover:bg-red-700 rounded">Delete</button>
+                <button onClick={() => editQuiz(index)} className="p-2 bg-yellow-500 hover:bg-yellow-600 rounded">Edit</button>
+                <button onClick={() => deleteQuiz(index)} className="p-2 bg-red-500 hover:bg-red-600 rounded">Delete</button>
               </div>
             </li>
           ))}
