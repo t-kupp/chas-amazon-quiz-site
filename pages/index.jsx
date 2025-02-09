@@ -6,17 +6,17 @@ export default function Home() {
   const { setSelectedQuiz, quizData } = useContext(QuizContext);
 
   return (
-    <div>
-      <div className='hero min-h-screen bg-base-200'>
-        <div className='hero-content text-center'>
-          <div className='max-w-md'>
-            <img src='/oscars-logo.svg' alt='Oscar Logo' className='mx-auto max-w-64 p-8' />
-            <h1 className='text-5xl font-semibold'>Welcome to the Oscars Quiz!</h1>
+    <div className='hero min-h-screen bg-base-200'>
+      <div className='hero-content text-center'>
+        <div className='max-w-xl'>
+          <img src='/oscars-logo.svg' alt='Oscar Logo' className='mx-auto max-w-48 p-8' />
+          <div className='rounded-2xl bg-white px-4 py-4 shadow-lg lg:px-16 lg:py-8'>
+            <h1 className='text-3xl font-semibold lg:text-5xl'>Welcome to the Oscars Quiz!</h1>
             <p className='py-10'>
               This is Group Amazon's quiz site.
               <br /> Are you ready to test your knowledge of the famous Academy Awards?
             </p>
-            <ul className='content- grid grid-cols-2 gap-4'>
+            <ul className='grid grid-cols-1 gap-4 md:grid-cols-2'>
               {quizData.map((quiz, key) => {
                 return (
                   <Link key={key} href={quiz.href}>

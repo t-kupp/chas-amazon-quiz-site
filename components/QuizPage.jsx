@@ -39,16 +39,24 @@ export default function QuizPage({ quiz }) {
   };
 
   return (
-    <div className='flex min-h-screen flex-col items-center justify-center'>
+    <div className='flex min-h-screen flex-col items-center justify-center bg-base-200 pt-24'>
       {showEndScreen ? (
         <QuizEndScreen userScore={userScore} userAnswers={userAnswers} />
       ) : (
         <>
-          <h1 className='mb-12 text-4xl font-bold text-primary'>{quiz.title}</h1>
+          <h1 className='mb-8 px-2 text-center text-3xl font-bold text-primary lg:text-4xl'>
+            {quiz.title}
+          </h1>
           <p className='mb-2'>
             {currentQuestionIndex + 1} of {quiz.questions.length}
           </p>
-          <QuizCard currentQuestion={currentQuestion} onAnswer={onAnswer} handleNext={handleNext} />
+          <div className='p-4'>
+            <QuizCard
+              currentQuestion={currentQuestion}
+              onAnswer={onAnswer}
+              handleNext={handleNext}
+            />
+          </div>
         </>
       )}
     </div>

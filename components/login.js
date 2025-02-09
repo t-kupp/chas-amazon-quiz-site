@@ -42,7 +42,7 @@ export default function Login({ onLogin }) {
               className='mt-2 w-full rounded-lg border border-gray-300 p-3'
             />
           </div>
-          <button type='submit' className='btn btn-primary w-full rounded-lg py-3 text-white'>
+          <button type='submit' className='btn btn-primary w-full rounded-lg py-3'>
             Login
           </button>
         </form>
