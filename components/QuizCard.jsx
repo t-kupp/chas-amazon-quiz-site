@@ -24,7 +24,7 @@ const QuizCard = ({ currentQuestion, onAnswer, handleNext }) => {
   };
 
   return (
-    <div className='mx-auto flex max-w-xl flex-col items-center rounded-2xl bg-white p-4 shadow-lg lg:px-16 lg:py-8'>
+    <div className='mx-auto flex max-w-xl flex-col items-center rounded-2xl bg-base-100 p-4 shadow-lg lg:px-16 lg:py-8'>
       <h2 className='mb-8 flex min-h-24 items-center text-center text-lg font-semibold lg:text-xl'>
         {currentQuestion.title}
       </h2>
@@ -35,7 +35,7 @@ const QuizCard = ({ currentQuestion, onAnswer, handleNext }) => {
             <div
               key={index}
               onClick={() => handleSelect(index)}
-              className={`btn btn-primary flex min-h-14 w-full cursor-pointer items-center justify-center rounded-lg border-2 px-4 py-2 text-center font-normal transition-colors duration-200 md:min-h-20 ${!isSelected && 'btn-outline'}`}
+              className={`btn btn-primary flex min-h-14 w-full cursor-pointer items-center justify-center rounded-lg border px-4 py-2 text-center font-normal transition-colors duration-200 md:min-h-20 ${!isSelected && 'btn-outline'}`}
             >
               {ans.title}
             </div>

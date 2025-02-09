@@ -10,7 +10,7 @@ export default function Home() {
       <div className='hero-content text-center'>
         <div className='max-w-xl'>
           <img src='/oscars-logo.svg' alt='Oscar Logo' className='mx-auto max-w-48 p-8' />
-          <div className='rounded-2xl bg-white px-4 py-4 shadow-lg lg:px-16 lg:py-8'>
+          <div className='rounded-2xl bg-base-100 px-4 py-4 shadow-lg lg:px-16 lg:py-8'>
             <h1 className='text-3xl font-semibold lg:text-5xl'>Welcome to the Oscars Quiz!</h1>
             <p className='py-10'>
               This is Group Amazon's quiz site.
