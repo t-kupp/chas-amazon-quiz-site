@@ -7,6 +7,7 @@ export default function QuizPage({ quiz }) {
   const [isLastQuestion, setIsLastQuestion] = useState(false);
   const [showEndScreen, setShowEndScreen] = useState(false);
   const [userScore, setUserScore] = useState(0);
+  const [userAnswers, setUserAnswers] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(
     quiz.questions[0] || { title: '', answers: [] },
   );
@@ -16,10 +17,14 @@ export default function QuizPage({ quiz }) {
   }, [currentQuestionIndex, quiz.questions.length]);
 
   const onAnswer = (answerData) => {
-    console.log(answerData);
     if (answerData.answeredCorrectly) {
       setUserScore(userScore + 1);
     }
+
+    const newUserAnswers = [...userAnswers, answerData];
+    console.log(newUserAnswers);
+
+    setUserAnswers(newUserAnswers);
   };
 
   const handleNext = () => {
@@ -36,7 +41,7 @@ export default function QuizPage({ quiz }) {
   return (
     <div className='flex min-h-screen flex-col items-center justify-center'>
       {showEndScreen ? (
-        <QuizEndScreen userScore={userScore} />
+        <QuizEndScreen userScore={userScore} userAnswers={userAnswers} />
       ) : (
         <>
           <h1 className='mb-12 text-4xl font-bold'>{quiz.title}</h1>

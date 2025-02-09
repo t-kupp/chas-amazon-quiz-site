@@ -8,9 +8,14 @@ const QuizCard = ({ currentQuestion, onAnswer, handleNext }) => {
     if (!completed) {
       setCompleted(true);
       setSelectedIndex(index);
+
+      const correctAnswer = currentQuestion.answers.find((a) => a.isCorrect)?.title;
+
       onAnswer({
         question: currentQuestion.title,
         answeredCorrectly: isCorrect,
+        selectedAnswer: currentQuestion.answers[index].title,
+        correctAnswer: correctAnswer,
       });
     }
   };
