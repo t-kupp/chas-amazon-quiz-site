@@ -2,7 +2,6 @@ import { useState, useContext } from 'react';
 import Login from '@/components/login';
 import { QuizContext } from '@/context/quizContext';
 
-
 export default function Admin() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [quiz, setQuiz] = useState({
@@ -10,7 +9,7 @@ export default function Admin() {
     href: 'quizPage',
     questions: [],
   });
-  const {quizData, setQuizData } = useContext(QuizContext);
+  const { quizData, setQuizData } = useContext(QuizContext);
   const [editingIndex, setEditingIndex] = useState(null);
 
   if (!loggedIn) {
@@ -103,17 +102,19 @@ export default function Admin() {
             ))}
           </div>
         ))}
-        <button onClick={handleSubmit} className="mt-4 p-2 bg-purple-600 hover:bg-purple-700 rounded">{editingIndex !== null ? 'Update Quiz' : 'Submit Quiz'}</button>
+        <button onClick={handleSubmit} className="mt-4 p-2 bg-purple-600 hover:bg-purple-700 rounded">
+          {editingIndex !== null ? 'Update Quiz' : 'Submit Quiz'}
+        </button>
       </div>
-      
+
       <div className="w-1/3 p-6 bg-gray-800 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-4">Quizzes</h2>
         <ul>
           {quizData.map((q, index) => (
-            <li key={index} className="border p-2 mt-2 flex justify-between bg-gray-700 rounded">
-              <span className="text-lg font-semibold">{q.title}</span>
-              <div>
-                <button onClick={() => editQuiz(index)} className="mr-2 p-2 bg-yellow-600 hover:bg-yellow-700 rounded">Edit</button>
+            <li key={index} className="border p-2 mt-2 flex flex-col bg-gray-700 rounded">
+              <span className="text-lg font-semibold break-words">{q.title}</span>
+              <div className="mt-2 flex gap-2 justify-end">
+                <button onClick={() => editQuiz(index)} className="p-2 bg-yellow-600 hover:bg-yellow-700 rounded">Edit</button>
                 <button onClick={() => deleteQuiz(index)} className="p-2 bg-red-600 hover:bg-red-700 rounded">Delete</button>
               </div>
             </li>
