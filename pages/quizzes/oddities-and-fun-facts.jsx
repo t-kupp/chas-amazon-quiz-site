@@ -3,7 +3,7 @@ import { QuizContext } from '@/context/quizContext';
 import { useContext } from 'react';
 
 export default function oscars2025() {
-  const { quizData } = useContext(QuizContext);
+  const { selectedQuiz } = useContext(QuizContext);
 
-  return <QuizPage quiz={quizData.odditiesAndFunFactsQuiz} />;
+  return <QuizPage quiz={selectedQuiz} />;
 }

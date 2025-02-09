@@ -4,8 +4,9 @@ import Link from 'next/link';
 
 
 export default function Home() {
-  const { quizData } = useContext(QuizContext);
+const {setSelectedQuiz, quizData}  = useContext(QuizContext);
   
+console.log(setSelectedQuiz)
 
   return (
     <div>
@@ -21,11 +22,13 @@ export default function Home() {
               This is Group Amazon's Quiz site. <br/> Are you ready to test how wide is your knowledge about the famous Academy Awards?
             </p>
             <ul className='content- grid grid-cols-2 gap-4'>
-              {Object.entries(quizData).map(([key, quiz]) => (
+              {quizData.map((quiz, key) => {
+                console.log(quiz);
+                return (
                 <Link key={key} href={quiz.href}>
-                  <button className='btn btn-primary w-full'>{quiz.title}</button>
+                  <button onClick={() => setSelectedQuiz(quiz)} className='btn btn-primary w-full'>{quiz.title}</button>
                 </Link>
-              ))}
+              )})}
             </ul>
           </div>
         </div>

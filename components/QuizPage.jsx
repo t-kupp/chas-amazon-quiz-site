@@ -1,4 +1,5 @@
 import QuizCard from '@/components/QuizCard';
+import { initialQuizData } from '@/context/initialQuizData';
 import { useState, useEffect } from 'react';
 
 export default function QuizPage({ quiz }) {

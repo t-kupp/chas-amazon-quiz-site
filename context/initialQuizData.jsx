@@ -202,9 +202,9 @@ const odditiesAndFunFactsQuiz = {
   ],
 };
 
-export const initialQuizData = {
+export const initialQuizData = [
   oscars2025Quiz,
   oscarHistoryQuiz,
   unforgettableMomentsQuiz,
   odditiesAndFunFactsQuiz,
-};
+]
