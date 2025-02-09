@@ -1,5 +1,5 @@
 const oscars2025Quiz = {
-  title: 'About the Oscars 2025!',
+  title: 'About the Oscars 2025',
   href: '/quizzes/oscars-2025',
   questions: [
     {
@@ -207,4 +207,4 @@ export const initialQuizData = [
   oscarHistoryQuiz,
   unforgettableMomentsQuiz,
   odditiesAndFunFactsQuiz,
-]
+];

@@ -2,33 +2,33 @@ import { useContext } from 'react';
 import { QuizContext } from '@/context/quizContext';
 import Link from 'next/link';
 
-
 export default function Home() {
-const {setSelectedQuiz, quizData}  = useContext(QuizContext);
-  
-console.log(setSelectedQuiz)
+  const { setSelectedQuiz, quizData } = useContext(QuizContext);
 
   return (
     <div>
-      <button className='btn btn-neutral fixed right-4 top-4 ml-auto'>
-        <Link href={'/admin'}>Admin</Link>
-      </button>
       <div className='hero min-h-screen bg-base-200'>
         <div className='hero-content text-center'>
           <div className='max-w-md'>
-            <img src='./Academy_Logo_Symbol.jpeg'  alt="Oscar Logo"/>
-            <h1 className='text-5xl font-bold'>Welcome to our Oscar's Quiz!</h1>
-            <p className='py-10 font-semibold'>
-              This is Group Amazon's Quiz site. <br/> Are you ready to test how wide is your knowledge about the famous Academy Awards?
+            <img src='/oscars-logo.svg' alt='Oscar Logo' className='mx-auto max-w-64 p-8' />
+            <h1 className='text-5xl font-semibold'>Welcome to the Oscars Quiz!</h1>
+            <p className='py-10'>
+              This is Group Amazon's quiz site.
+              <br /> Are you ready to test your knowledge of the famous Academy Awards?
             </p>
             <ul className='content- grid grid-cols-2 gap-4'>
               {quizData.map((quiz, key) => {
-                console.log(quiz);
                 return (
-                <Link key={key} href={quiz.href}>
-                  <button onClick={() => setSelectedQuiz(quiz)} className='btn btn-primary w-full'>{quiz.title}</button>
-                </Link>
-              )})}
+                  <Link key={key} href={quiz.href}>
+                    <button
+                      onClick={() => setSelectedQuiz(quiz)}
+                      className='btn btn-primary w-full font-normal tracking-wide'
+                    >
+                      {quiz.title}
+                    </button>
+                  </Link>
+                );
+              })}
             </ul>
           </div>
         </div>

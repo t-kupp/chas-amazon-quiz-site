@@ -44,11 +44,10 @@ export default function QuizPage({ quiz }) {
         <QuizEndScreen userScore={userScore} userAnswers={userAnswers} />
       ) : (
         <>
-          <h1 className='mb-12 text-4xl font-bold'>{quiz.title}</h1>
-          <p className=''>
-            Question {currentQuestionIndex + 1} of {quiz.questions.length}
+          <h1 className='mb-12 text-4xl font-bold text-primary'>{quiz.title}</h1>
+          <p className='mb-2'>
+            {currentQuestionIndex + 1} of {quiz.questions.length}
           </p>
-
           <QuizCard currentQuestion={currentQuestion} onAnswer={onAnswer} handleNext={handleNext} />
         </>
       )}

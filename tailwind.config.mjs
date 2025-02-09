@@ -7,7 +7,11 @@ export default {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        jost: 'Jost',
+      },
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {

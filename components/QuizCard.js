@@ -26,7 +26,7 @@ const QuizCard = ({ currentQuestion, onAnswer, handleNext }) => {
       <div className='grid grid-cols-7 items-center gap-4'>
         <div className='col-span-1'></div>
         <div className='col-span-5'>
-          <div className='relative grid grid-cols-1 gap-2'>
+          <div className='relative grid grid-cols-2 gap-2'>
             {currentQuestion.answers.map((ans, index) => {
               const isSelected = index === selectedIndex;
               const isCorrect = ans.isCorrect;
