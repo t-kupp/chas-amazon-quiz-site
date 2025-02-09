@@ -1,6 +1,6 @@
 import QuizCard from '@/components/QuizCard';
-import { initialQuizData } from '@/context/initialQuizData';
 import { useState, useEffect } from 'react';
+import QuizEndScreen from './QuizEndScreen';
 
 export default function QuizPage({ quiz }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -36,10 +36,7 @@ export default function QuizPage({ quiz }) {
   return (
     <div className='flex min-h-screen flex-col items-center justify-center'>
       {showEndScreen ? (
-        <div>
-          <h1 className='mb-12 text-4xl font-bold'>End Screen</h1>
-          <p>You got {userScore} question right!</p>
-        </div>
+        <QuizEndScreen userScore={userScore} />
       ) : (
         <>
           <h1 className='mb-12 text-4xl font-bold'>{quiz.title}</h1>
