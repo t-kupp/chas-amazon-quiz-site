@@ -1,6 +1,7 @@
 const oscars2025Quiz = {
   title: 'About the Oscars 2025',
   href: '/quizzes/oscars-2025',
+  imgSrc: '/img-2025.webp',
   questions: [
     {
       title:
@@ -56,6 +57,7 @@ const oscars2025Quiz = {
 const oscarHistoryQuiz = {
   title: 'Oscars History',
   href: '/quizzes/oscars-history',
+  imgSrc: '/img-history.webp',
   questions: [
     {
       title: 'In which year was the first-ever Academy Awards ceremony held?',
@@ -108,6 +110,7 @@ const oscarHistoryQuiz = {
 const unforgettableMomentsQuiz = {
   title: 'Unforgettable Moments',
   href: '/quizzes/unforgettable-moments',
+  imgSrc: '/img-moments.webp',
   questions: [
     {
       title: 'In which edition was the famous Best Picture mistake made?',
@@ -161,6 +164,7 @@ const unforgettableMomentsQuiz = {
 const odditiesAndFunFactsQuiz = {
   title: 'Oddities and Fun Facts',
   href: '/quizzes/oddities-and-fun-facts',
+  imgSrc: '/img-oddities.jpg',
   questions: [
     {
       title:
