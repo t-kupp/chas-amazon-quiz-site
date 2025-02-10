@@ -5,16 +5,39 @@ export default {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  daisyui: {
-    themes: ['light', 'dark'],
-  },
+
   theme: {
     extend: {
-      colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+      fontFamily: {
+        jost: 'Jost',
       },
     },
   },
   plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          primary: '#D4AF37',
+          secondary: '#B10D3A',
+          accent: '#333333',
+          neutral: '#000000',
+          'base-100': '#FFFFFF',
+          'base-200': '#F5F5F5',
+          'base-300': '#E0E0E0',
+        },
+      },
+      {
+        dark: {
+          primary: '#D4AF37',
+          secondary: '#B10D3A',
+          accent: '#F0F0F0',
+          neutral: '#1D1D1D',
+          'base-100': '#2C2C2C',
+          'base-200': '#3A3A3A',
+          'base-300': '#4A4A4A',
+        },
+      },
+    ],
+  },
 };
