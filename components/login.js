@@ -27,7 +27,7 @@ export default function Login({ onLogin }) {
               id='username'
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className='mt-2 w-full rounded-lg border border-base-300 p-3 text-neutral'
+              className='mt-2 w-full rounded-lg border border-base-300 p-3'
             />
           </div>
           <div>
@@ -39,7 +39,7 @@ export default function Login({ onLogin }) {
               id='password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className='mt-2 w-full rounded-lg border border-base-300 p-3 text-neutral'
+              className='mt-2 w-full rounded-lg border border-base-300 p-3'
             />
           </div>
           <button type='submit' className='btn btn-primary w-full rounded-lg py-3'>
