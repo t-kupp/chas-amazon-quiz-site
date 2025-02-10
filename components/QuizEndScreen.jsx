@@ -7,7 +7,7 @@ const getFeedbackMessage = (score, total) => {
     if (percentage === 100) return "🌟 You're a movie genius! Move to Hollywood! 🎬";
     if (percentage >= 80) return '🎥 Impressive! You know the Oscars Awards well!';
     if (percentage >= 50) return '🍿 Not bad, but keep watching movies!';
-    return '🙈 That was terrible!You have no idea about the Academy Awards! 😅 ';
+    return '🙈 God try but! but apparently the Academy Awards is not your thing!😅 ';
   };
 
 return (
