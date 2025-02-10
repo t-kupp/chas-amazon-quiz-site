@@ -21,7 +21,7 @@ export default function Home() {
                 return (
                   <div
                     key={index}
-                    className='card mx-auto mb-6 w-full max-w-xs bg-base-200 shadow-xl transition-transform duration-200 hover:scale-105'
+                    className='card mx-auto w-full max-w-xs bg-base-200 transition-transform duration-200 hover:scale-105'
                   >
                     <figure className='px-10 pt-10'>
                       {console.log(quiz)}
