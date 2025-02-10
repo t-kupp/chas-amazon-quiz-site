@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function QuizEndScreen({ userScore, userAnswers, totalQuestions }) {
-const getFeedbackMessage = (score, total) => {
+  const getFeedbackMessage = (score, total) => {
     const percentage = (score / total) * 100;
 
     if (percentage === 100) return "🌟 You're a movie genius! Move to Hollywood! 🎬";
@@ -10,8 +10,8 @@ const getFeedbackMessage = (score, total) => {
     return '🙈 God try but! but apparently the Academy Awards is not your thing!😅 ';
   };
 
-return (
-    <div className='flex w-full max-w-xl flex-col items-center rounded-xl bg-white p-6 shadow-lg'>
+  return (
+    <div className='flex w-full max-w-xl flex-col items-center rounded-xl bg-base-100 p-6 shadow-lg'>
       <h2 className='mb-4 text-2xl font-bold text-primary'>Block Completed!</h2>
       <p className='mt-2 text-lg'>
         You got{' '}
@@ -20,7 +20,9 @@ return (
         </strong>{' '}
         correct.
       </p>
-      <p className='mt-2 italic-bold text-gray-600'>{getFeedbackMessage(userScore, totalQuestions)}</p>
+      <p className='italic-bold mt-2 text-gray-600'>
+        {getFeedbackMessage(userScore, totalQuestions)}
+      </p>
 
       <div className='mt-6 w-full rounded-lg bg-neutral p-4 shadow'>
         <h3 className='text-lg font-semibold text-primary'>Summary:</h3>
