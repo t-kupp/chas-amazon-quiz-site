@@ -12,7 +12,7 @@ export default function QuizEndScreen({ userScore, userAnswers, totalQuestions }
 
   return (
     <div className='flex w-full max-w-xl flex-col items-center rounded-xl bg-base-100 p-6 shadow-lg'>
-      <h2 className='mb-4 text-2xl font-bold text-primary'>Block Completed!</h2>
+      <h2 className='mb-4 text-2xl font-bold text-primary'>Quiz Completed!</h2>
       <p className='mt-2 text-lg'>
         You got{' '}
         <strong>
