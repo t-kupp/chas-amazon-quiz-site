@@ -35,7 +35,7 @@ const QuizCard = ({ currentQuestion, onAnswer, handleNext }) => {
             <div
               key={index}
               onClick={() => handleSelect(index)}
-              className={`btn btn-primary flex min-h-14 w-full cursor-pointer items-center justify-center rounded-lg border px-4 py-2 text-center font-normal transition-colors duration-200 md:min-h-20 ${!isSelected && 'btn-outline'}`}
+              className={`btn btn-primary flex min-h-14 w-full cursor-pointer items-center justify-center rounded-lg border px-4 py-2 text-center text-base transition-colors duration-200 md:min-h-20 ${!isSelected && 'btn-outline'}`}
             >
               {ans.title}
             </div>
@@ -44,7 +44,7 @@ const QuizCard = ({ currentQuestion, onAnswer, handleNext }) => {
       </div>
       <button
         onClick={handleSubmit}
-        className='btn btn-accent font-normal'
+        className='btn btn-accent text-base font-normal'
         disabled={selectedIndex === null}
       >
         Next

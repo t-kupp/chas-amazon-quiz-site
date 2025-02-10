@@ -12,7 +12,7 @@ export default function Home() {
           <div className='rounded-2xl bg-base-100 px-4 py-4 shadow-lg lg:px-16 lg:py-8'>
             <img src='/oscars-logo.svg' alt='Oscar Logo' className='mx-auto mb-4 max-w-48' />
             <h1 className='text-3xl font-semibold lg:text-5xl'>Welcome to the Oscars Quiz!</h1>
-            <p className='py-10'>
+            <p className='py-10 text-lg lg:text-xl'>
               This is Group Amazon's quiz site.
               <br /> Are you ready to test your knowledge of the famous Academy Awards?
             </p>
@@ -27,12 +27,14 @@ export default function Home() {
                       {console.log(quiz)}
                       <img src={quiz.imgSrc} alt={quiz.title} className='aspect-[5/3] rounded-xl' />
                     </figure>
-                    <div className='card-body items-center text-center'>
+                    <div className='card-body items-center justify-between text-center'>
                       <h2 className='card-title'>{quiz.title}</h2>
-                      <p>{quiz.description || 'Take this quiz to test your knowledge!'}</p>
                       <div className='card-actions'>
                         <Link href={quiz.href}>
-                          <button onClick={() => setSelectedQuiz(quiz)} className='btn btn-primary'>
+                          <button
+                            onClick={() => setSelectedQuiz(quiz)}
+                            className='btn btn-primary text-base'
+                          >
                             Start Quiz
                           </button>
                         </Link>
