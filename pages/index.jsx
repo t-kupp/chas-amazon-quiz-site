@@ -25,7 +25,7 @@ export default function Home() {
                   >
                     <figure className='px-10 pt-10'>
                       {console.log(quiz)}
-                      <img src={quiz.imgSrc} alt={quiz.title} className='rounded-xl' />
+                      <img src={quiz.imgSrc} alt={quiz.title} className='aspect-[5/3] rounded-xl' />
                     </figure>
                     <div className='card-body items-center text-center'>
                       <h2 className='card-title'>{quiz.title}</h2>
