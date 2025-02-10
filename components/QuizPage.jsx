@@ -41,7 +41,11 @@ export default function QuizPage({ quiz }) {
   return (
     <div className='flex min-h-screen flex-col items-center justify-center bg-base-200 pt-24'>
       {showEndScreen ? (
-        <QuizEndScreen userScore={userScore} userAnswers={userAnswers} />
+        <QuizEndScreen
+          userScore={userScore}
+          userAnswers={userAnswers}
+          totalQuestions={quiz.questions.length}
+        />
       ) : (
         <>
           <h1 className='mb-8 px-2 text-center text-3xl font-bold text-primary lg:text-4xl'>
